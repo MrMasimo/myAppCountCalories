@@ -1,10 +1,11 @@
 class FormUI {
-  constructor () {
-    this.formParametrs = document.forms['parameters'];
-    this.formPhysicalActivity = document.forms['physical-activity'];
-    this.ageInput = document.getElementById('ages');
-    this.heightInput = document.getElementById('height');
-    this.weightInput = document.getElementById('weight');
+  constructor() {
+    this.formGender = document.querySelector(".genders");
+    this.formParametrs = document.forms["parameters"];
+    this.formPhysicalActivity = document.forms["physical-activity"];
+    this.ageInput = document.getElementById("ages");
+    this.heightInput = document.getElementById("height");
+    this.weightInput = document.getElementById("weight");
   }
 
   get form() {
@@ -23,11 +24,17 @@ class FormUI {
     return this.weightInput.value;
   }
 
-  getChangeRadio() {
-    const selectedActivity = document.querySelector('input[type=radio]:checked');
+  getCheckedRadio() {
+    const selectedActivity = document.querySelector(
+      "input[class=custom-control-input]:checked"
+    );
     return selectedActivity.value;
   }
 
+  getActiveButton() {
+    const selectedActivity = document.querySelector(".active");
+    return selectedActivity.getAttribute('id');
+  }
 }
 
 const formUI = new FormUI();

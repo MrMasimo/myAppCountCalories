@@ -1,4 +1,3 @@
 # MyApp for counting calories
 
-
-For getting result you need to choose 
+An app for calculating consumption by gender, anthropometric data, and activity.
